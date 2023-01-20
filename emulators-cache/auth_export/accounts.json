@@ -1,0 +1,76 @@
+{
+  "kind": "identitytoolkit#DownloadAccountResponse",
+  "users": [
+    {
+      "localId": "3G5IYxAbE3fShX2PwJQS5eYH6Mqu",
+      "createdAt": "1671939990176",
+      "lastLoginAt": "1673337639991",
+      "displayName": "Risal Fajar",
+      "photoUrl": "",
+      "passwordHash": "fakeHash:salt=fakeSalt2iObn7h7YdVZUZyu5WeZ:password=jenengmu",
+      "salt": "fakeSalt2iObn7h7YdVZUZyu5WeZ",
+      "passwordUpdatedAt": 1673798482550,
+      "customAttributes": "{\"role\":\"OWNER\"}",
+      "providerUserInfo": [
+        {
+          "providerId": "password",
+          "email": "risalfajar@sinar-gold.com",
+          "federatedId": "risalfajar@sinar-gold.com",
+          "rawId": "risalfajar@sinar-gold.com",
+          "displayName": "Risal Fajar",
+          "photoUrl": ""
+        }
+      ],
+      "validSince": "1673798482",
+      "email": "risalfajar@sinar-gold.com",
+      "emailVerified": false,
+      "disabled": false,
+      "lastRefreshAt": "2023-01-17T10:31:29.797Z"
+    },
+    {
+      "localId": "adminb",
+      "createdAt": "1672722067207",
+      "lastLoginAt": "1672722067207",
+      "displayName": "Admin Berlian",
+      "passwordHash": "fakeHash:salt=fakeSalt7ojbXgXf0eNsy1Kmnz6z:password=jenengmu",
+      "salt": "fakeSalt7ojbXgXf0eNsy1Kmnz6z",
+      "passwordUpdatedAt": 1673798482550,
+      "customAttributes": "{\"role\":\"ADMIN\",\"pages\":[\"Master Supplier\",\"Batu Shape\",\"Batu Color\",\"Batu Clarity\",\"Batu Fluorescence\",\"Batu Symmetry\",\"Batu Polish\",\"Batu Cutgrade\",\"Jenis Batu\"]}",
+      "providerUserInfo": [
+        {
+          "providerId": "password",
+          "email": "adminb@sinar-gold.com",
+          "federatedId": "adminb@sinar-gold.com",
+          "rawId": "adminb@sinar-gold.com",
+          "displayName": "Admin Berlian"
+        }
+      ],
+      "validSince": "1673798482",
+      "email": "adminb@sinar-gold.com",
+      "emailVerified": false,
+      "disabled": false
+    },
+    {
+      "localId": "owner",
+      "createdAt": "1672830987575",
+      "lastLoginAt": "1672830987575",
+      "displayName": "Owner Risal",
+      "passwordHash": "fakeHash:salt=fakeSalt4WVHImuyi1D6XeNGQRJF:password=jenengmu",
+      "salt": "fakeSalt4WVHImuyi1D6XeNGQRJF",
+      "passwordUpdatedAt": 1673798482551,
+      "providerUserInfo": [
+        {
+          "providerId": "password",
+          "email": "owner@sinar-gold.com",
+          "federatedId": "owner@sinar-gold.com",
+          "rawId": "owner@sinar-gold.com",
+          "displayName": "Owner Risal"
+        }
+      ],
+      "validSince": "1673798482",
+      "email": "owner@sinar-gold.com",
+      "emailVerified": false,
+      "disabled": false
+    }
+  ]
+}

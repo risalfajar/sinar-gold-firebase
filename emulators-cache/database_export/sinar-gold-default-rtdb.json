@@ -1,0 +1,125 @@
+{
+  "masterData": {
+    "chamfer": {
+      "aweaweawe": {
+        "code": "aweaweawe",
+        "name": "aewaeawe",
+        "tagWeight": 0.32,
+        "warehouseCode": "Gudang Bogor",
+        "weight": 0.12
+      }
+    },
+    "diamond": {
+      "shape": {
+        "506198": {
+          "code": "506198",
+          "name": "Falkirye"
+        }
+      },
+      "stoneType": {
+        "573532": {
+          "code": "573532",
+          "name": "Ingot"
+        }
+      },
+      "supplier": {
+        "475048": {
+          "code": "475048",
+          "name": "Bella"
+        },
+        "619611": {
+          "code": "619611",
+          "name": "Risal"
+        }
+      }
+    },
+    "group": [
+      null,
+      {
+        "capital": 4000,
+        "code": "1",
+        "diamond": "Safir",
+        "name": "Seri A",
+        "price": 5000,
+        "type": "Bawah"
+      },
+      {
+        "capital": 9000,
+        "code": "2",
+        "diamond": "Safir",
+        "name": "Seri B",
+        "price": 10000,
+        "type": "Menengah"
+      },
+      {
+        "capital": 10000,
+        "code": "3",
+        "diamond": "Ruby",
+        "name": "Seri C",
+        "price": 12000,
+        "type": "Menengah"
+      }
+    ],
+    "itemType": {
+      "-NLRXKLQePjYCiIy75mY": {
+        "groupCode": "Seri A",
+        "id": "",
+        "name": "Mahal"
+      }
+    },
+    "kind": [
+      null,
+      {
+        "code": "1",
+        "groupCode": "Seri A",
+        "name": "Emas"
+      }
+    ],
+    "noteDescription": {
+      "-NLZA18b6SaNcPRqHKcU": {
+        "description": "Test",
+        "groupCode": "1",
+        "id": "-NLZA18b6SaNcPRqHKcU"
+      },
+      "-NLZA18f48c9CICrbNOG": {
+        "description": "Test",
+        "groupCode": "2",
+        "id": "-NLZA18f48c9CICrbNOG"
+      },
+      "-NLZA18g-Iw2-FJvgvu0": {
+        "description": "Test Test",
+        "groupCode": "3",
+        "id": "-NLZA18g-Iw2-FJvgvu0"
+      }
+    },
+    "salesman": [
+      null,
+      {
+        "code": "1",
+        "name": "Fajar"
+      },
+      {
+        "code": "2",
+        "name": "Fahri"
+      },
+      {
+        "code": "3",
+        "name": "Falkirye"
+      }
+    ],
+    "warehouse": {
+      "A": {
+        "code": "A",
+        "name": "Gudang Jabar"
+      },
+      "B": {
+        "code": "B",
+        "name": "Gudang Bogor"
+      },
+      "C": {
+        "code": "C",
+        "name": "Gudang Semarang"
+      }
+    }
+  }
+}
