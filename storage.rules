@@ -2,7 +2,31 @@ rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
     match /{allPaths=**} {
-      allow read, write: if false;
+      allow read: if isSignedIn();
     }
+        
+    match /craftsmanOrder/{id}/{allPaths=**} {
+      allow write: if isSignedIn() && imageOnly() && maxSize(1000);
+    }
+  }
+
+  function isSignedIn() {
+      return request.auth != null;
+  }
+
+  function isSignedInWithUid(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+  }
+
+  function isAdmin() {
+      return isSignedIn() && request.auth.token.role == "ADMIN";
+  }
+
+  function maxSize(sizeInKb) {
+      return request.resource.size <= sizeInKb * 1024;
+  }
+
+  function imageOnly() {
+      return request.resource.contentType.matches('image/.*');
   }
 }
