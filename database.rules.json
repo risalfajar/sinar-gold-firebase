@@ -1,6 +1,10 @@
 {
   "rules": {
-    ".read": "now < 1675616400000",
-    ".write": "now < 1675616400000"
+    "masterData": {
+      "$type": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    }
   }
 }
