@@ -1,5 +1,5 @@
 import * as functions from 'firebase-functions'
-import {CLOUD_FUNCTIONS_DEFAULT_REGION, COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_MODEL} from "../../../lib/constants"
+import {CLOUD_FUNCTIONS_DEFAULT_REGION, COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_MODEL} from "../../lib/constants"
 import CraftsmanOrderRepository from "./data/source/orderRepository"
 import {FieldValue} from "firebase-admin/firestore"
 

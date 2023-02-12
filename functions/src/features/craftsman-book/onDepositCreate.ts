@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions'
-import {CLOUD_FUNCTIONS_DEFAULT_REGION, COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_DEPOSIT} from "../../../lib/constants"
+import {CLOUD_FUNCTIONS_DEFAULT_REGION, COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_DEPOSIT} from "../../lib/constants"
 import CraftsmanOrderModelRepository from "./data/source/modelRepository"
-import {db} from "../../../lib/firebaseConfig"
+import {db} from "../../lib/firebaseConfig"
 import CraftsmanOrderRepository from "./data/source/orderRepository"
 import {FieldValue} from "firebase-admin/firestore"
 import {depositConverter} from "./data/deposit"

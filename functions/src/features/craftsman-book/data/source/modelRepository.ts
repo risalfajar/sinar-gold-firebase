@@ -1,7 +1,7 @@
-import FirestoreRepository from "../../../../../lib/data/firestoreRepository"
+import FirestoreRepository from "../../../../lib/data/firestoreRepository"
 import {modelConverter, OrderModel} from "../model"
-import {db} from "../../../../../lib/firebaseConfig"
-import {COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_MODEL} from "../../../../../lib/constants"
+import {db} from "../../../../lib/firebaseConfig"
+import {COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_MODEL} from "../../../../lib/constants"
 import {firestore} from "firebase-admin"
 import Transaction = firestore.Transaction
 

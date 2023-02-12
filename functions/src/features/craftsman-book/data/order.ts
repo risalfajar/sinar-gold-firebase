@@ -1,6 +1,6 @@
 import {DocumentData, FirestoreDataConverter, QueryDocumentSnapshot} from "firebase-admin/firestore"
 import {firestore} from "firebase-admin"
-import {Salesman} from "../../../master-data/salesman/salesman"
+import {Salesman} from "../../master-data/salesman/salesman"
 import FieldValue = firestore.FieldValue
 
 export type CraftsmanOrder = {
