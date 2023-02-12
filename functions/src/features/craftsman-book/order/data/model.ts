@@ -5,7 +5,8 @@ export type OrderModel = {
     size: string,
     details: string,
     photoUrl: string,
-    quantity: number
+    quantity: number,
+    isFinished: boolean
 }
 
 export const modelConverter: FirestoreDataConverter<OrderModel> = {

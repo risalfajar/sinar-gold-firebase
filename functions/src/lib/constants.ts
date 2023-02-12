@@ -8,6 +8,7 @@ export const CUSTOM_CLAIMS_PAGES = 'pages'
 export const COLLECTION_USERS = 'users'
 export const COLLECTION_CRAFTSMAN_ORDER = 'craftsmanOrder'
 export const COLLECTION_CRAFTSMAN_ORDER_MODEL = 'models'
+export const COLLECTION_CRAFTSMAN_ORDER_DEPOSIT = 'deposits'
 
 // Cloud Functions
 export const CLOUD_FUNCTIONS_DEFAULT_REGION = 'asia-southeast2'
