@@ -1,4 +1,3 @@
-import {OrderMaterial} from "./material"
 import {DocumentData, FirestoreDataConverter, QueryDocumentSnapshot} from "firebase-admin/firestore"
 import {firestore} from "firebase-admin"
 import {Salesman} from "../../../master-data/salesman/salesman"
@@ -14,6 +13,13 @@ export type CraftsmanOrder = {
     material: OrderMaterial
     finishedWeight: number
     totalCost: number
+}
+
+export type OrderMaterial = {
+    rate: string
+    goldWeight: number
+    sampleWeight: number
+    jewelWeight: number
 }
 
 export const craftsmanOrderConverter: FirestoreDataConverter<CraftsmanOrder> = {

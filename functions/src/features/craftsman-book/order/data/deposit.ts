@@ -1,6 +1,5 @@
 import {OrderModel} from "./model"
-import {CraftsmanOrder} from "./order"
-import {OrderMaterial} from "./material"
+import {CraftsmanOrder, OrderMaterial} from "./order"
 import {DocumentData, FieldValue, FirestoreDataConverter, QueryDocumentSnapshot, WithFieldValue} from "firebase-admin/firestore"
 
 export type OrderDeposit = {
