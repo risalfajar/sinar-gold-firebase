@@ -5,12 +5,15 @@ import {Salesman} from "../../../master-data/salesman/salesman"
 import FieldValue = firestore.FieldValue
 
 export type CraftsmanOrder = {
-    id: string,
-    created?: Date,
-    craftsman: string,
-    salesman: Salesman,
-    modelCount: number,
+    id: string
+    created?: Date
+    finished?: Date | null
+    craftsman: string
+    salesman: Salesman
+    modelCount: number
     material: OrderMaterial
+    finishedWeight: number
+    totalCost: number
 }
 
 export const craftsmanOrderConverter: FirestoreDataConverter<CraftsmanOrder> = {

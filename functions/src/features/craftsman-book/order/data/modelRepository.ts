@@ -2,6 +2,8 @@ import FirestoreRepository from "../../../../lib/data/firestoreRepository"
 import {modelConverter, OrderModel} from "./model"
 import {db} from "../../../../lib/firebaseConfig"
 import {COLLECTION_CRAFTSMAN_ORDER, COLLECTION_CRAFTSMAN_ORDER_MODEL} from "../../../../lib/constants"
+import {firestore} from "firebase-admin"
+import Transaction = firestore.Transaction
 
 export default class CraftsmanOrderModelRepository extends FirestoreRepository<OrderModel> {
     private readonly orderId: string
@@ -20,5 +22,13 @@ export default class CraftsmanOrderModelRepository extends FirestoreRepository<O
 
     getId(item: OrderModel): string {
         return item.id
+    }
+
+    async getUnfinished(t: Transaction, limit: number = 1) {
+        const q = this.getQuery()
+            .where('isFinished', '!=', true)
+            .limit(limit)
+        const snapshot = await q.get()
+        return snapshot.docs.map(snap => snap.data() as OrderModel)
     }
 }
