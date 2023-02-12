@@ -9,6 +9,17 @@
         "weight": 0.12
       }
     },
+    "craftsman": {
+      "Clark": {
+        "name": "Clark"
+      },
+      "Panedi": {
+        "name": "Panedi"
+      },
+      "Steven": {
+        "name": "Steven"
+      }
+    },
     "diamond": {
       "shape": {
         "506198": {
