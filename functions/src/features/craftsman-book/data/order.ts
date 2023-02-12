@@ -12,6 +12,7 @@ export type CraftsmanOrder = {
     modelCount: number
     material: OrderMaterial
     finishedWeight: number
+    laborCost: number
     totalCost: number
 }
 

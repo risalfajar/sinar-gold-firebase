@@ -29,11 +29,13 @@ exports.onDepositCreate = functions.region(CLOUD_FUNCTIONS_DEFAULT_REGION)
                 const orderRepository = new CraftsmanOrderRepository()
                 const order = await orderRepository.transactedGet(t, context.params.orderId)
                 const finishedWeight = +(order!.finishedWeight + deposit.finishedMaterial.goldWeight).toFixed(2)
+                const laborCost = +(order!.laborCost + deposit.laborCost).toFixed(2)
                 const totalCost = order!.totalCost + deposit.totalCost
 
                 orderRepository.transactedUpdate(t, context.params.orderId, {
                     finished: hasOrderFinished ? FieldValue.serverTimestamp() : null,
                     finishedWeight,
+                    laborCost,
                     totalCost
                 })
             })
