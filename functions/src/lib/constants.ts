@@ -9,6 +9,7 @@ export const COLLECTION_USERS = 'users'
 export const COLLECTION_CRAFTSMAN_ORDER = 'craftsmanOrder'
 export const COLLECTION_CRAFTSMAN_ORDER_MODEL = 'models'
 export const COLLECTION_CRAFTSMAN_ORDER_DEPOSIT = 'deposits'
+export const COLLECTION_CRAFTSMAN_ORDER_ADVANCE = 'cashAdvances'
 
 // Cloud Functions
 export const CLOUD_FUNCTIONS_DEFAULT_REGION = 'asia-southeast2'
