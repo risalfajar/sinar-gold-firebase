@@ -3,6 +3,7 @@ import {throwExpression} from "../../lib/utils/throwExpression"
 import {Role} from "../user/types/role"
 import {CUSTOM_CLAIMS_ROLE} from "../../lib/constants"
 import {auth} from '../../lib/firebaseConfig'
+import {UserRepository} from "../user/data/userRepository"
 
 // Authority data of a user is stored in two places:
 // 1. Firestore
@@ -14,6 +15,11 @@ import {auth} from '../../lib/firebaseConfig'
 
 export function requireUserSignedIn(context: functions.https.CallableContext) {
     return context.auth ?? throwExpression('unauthenticated', 'User need to sign in first')
+}
+
+export async function havePageAccess(username: string, pageUrl: string) {
+    const user = await new UserRepository().get(username)
+    return user?.pages?.some(page => page.includes(pageUrl))
 }
 
 export async function isAdminOrHigher(username: string): Promise<boolean> {
