@@ -18,7 +18,7 @@ export function requireUserSignedIn(context: functions.https.CallableContext) {
 
 export async function isAdminOrHigher(username: string): Promise<boolean> {
     const role = await getRole(username)
-    return role === Role.ADMIN || role === Role.OWNER
+    return role === Role.ADMIN || role === Role.SUPERVISOR || role === Role.OWNER
 }
 
 export async function getRole(username: string): Promise<string> {
