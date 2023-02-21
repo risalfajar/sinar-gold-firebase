@@ -1,5 +1,5 @@
-import * as admin from 'firebase-admin'
-import {getFunctions} from 'firebase-admin/functions'
+import * as admin from "firebase-admin"
+import {getFunctions} from "firebase-admin/functions"
 
 export const app = admin.initializeApp()
 export const auth = admin.auth(app)

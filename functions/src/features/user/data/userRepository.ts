@@ -5,11 +5,11 @@ import {CollectionReference} from "firebase-admin/firestore"
 import {db} from "../../../lib/firebaseConfig"
 
 export class UserRepository extends FirestoreRepository<User> {
-    getId(item: User): string {
-        return item.username
-    }
+	getId(item: User): string {
+		return item.username
+	}
 
-    getCollectionRef(): CollectionReference<User> {
-        return db.collection(COLLECTION_USERS).withConverter(userConverter)
-    }
+	getCollectionRef(): CollectionReference<User> {
+		return db.collection(COLLECTION_USERS).withConverter(userConverter)
+	}
 }

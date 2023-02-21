@@ -25,14 +25,14 @@ export type OrderMaterial = {
 }
 
 export const craftsmanOrderConverter: FirestoreDataConverter<CraftsmanOrder> = {
-    toFirestore(model: CraftsmanOrder): DocumentData {
-        const any = model as any
-        if (!any.created) any.created = FieldValue.serverTimestamp()
-        delete any.id
-        return any
-    },
-    fromFirestore(snap: QueryDocumentSnapshot): CraftsmanOrder {
-        const data = snap.data()
-        return {...data, id: snap.id, created: data.created?.toDate()} as CraftsmanOrder
-    }
+	toFirestore(model: CraftsmanOrder): DocumentData {
+		const any = model as any
+		if (!any.created) any.created = FieldValue.serverTimestamp()
+		delete any.id
+		return any
+	},
+	fromFirestore(snap: QueryDocumentSnapshot): CraftsmanOrder {
+		const data = snap.data()
+		return {...data, id: snap.id, created: data.created?.toDate()} as CraftsmanOrder
+	}
 }

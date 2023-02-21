@@ -6,29 +6,29 @@ import {firestore} from "firebase-admin"
 import Transaction = firestore.Transaction
 
 export default class CraftsmanOrderModelRepository extends FirestoreRepository<OrderModel> {
-    private readonly orderId: string
+	private readonly orderId: string
 
-    constructor(orderId: string) {
-        super()
-        this.orderId = orderId
-    }
+	constructor(orderId: string) {
+		super()
+		this.orderId = orderId
+	}
 
-    getCollectionRef(): FirebaseFirestore.CollectionReference<OrderModel> {
-        return db.collection(COLLECTION_CRAFTSMAN_ORDER)
-            .doc(this.orderId)
-            .collection(COLLECTION_CRAFTSMAN_ORDER_MODEL)
-            .withConverter(modelConverter)
-    }
+	getCollectionRef(): FirebaseFirestore.CollectionReference<OrderModel> {
+		return db.collection(COLLECTION_CRAFTSMAN_ORDER)
+			.doc(this.orderId)
+			.collection(COLLECTION_CRAFTSMAN_ORDER_MODEL)
+			.withConverter(modelConverter)
+	}
 
-    getId(item: OrderModel): string {
-        return item.id
-    }
+	getId(item: OrderModel): string {
+		return item.id
+	}
 
-    async getUnfinished(t: Transaction, limit: number = 1) {
-        const q = this.getQuery()
-            .where('isFinished', '!=', true)
-            .limit(limit)
-        const snapshot = await q.get()
-        return snapshot.docs.map(snap => snap.data() as OrderModel)
-    }
+	async getUnfinished(t: Transaction, limit = 1) {
+		const q = this.getQuery()
+			.where("isFinished", "!=", true)
+			.limit(limit)
+		const snapshot = await q.get()
+		return snapshot.docs.map(snap => snap.data() as OrderModel)
+	}
 }

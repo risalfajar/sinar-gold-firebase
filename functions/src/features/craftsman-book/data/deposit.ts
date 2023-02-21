@@ -16,19 +16,19 @@ export type OrderDeposit = {
 }
 
 export const depositConverter: FirestoreDataConverter<OrderDeposit> = {
-    toFirestore: function (model: WithFieldValue<OrderDeposit>): DocumentData {
-        const any = {...model} as any
-        if (!any.created) any.created = FieldValue.serverTimestamp()
-        delete any.id
-        return any
-    },
-    fromFirestore: function (snapshot: QueryDocumentSnapshot): OrderDeposit {
-        const data = snapshot.data()
-        return {
-            ...data,
-            id: snapshot.id,
-            created: data.created?.toDate(),
-            order: {...data.order, created: data.order.created.toDate()}
-        } as OrderDeposit
-    }
+	toFirestore: function (model: WithFieldValue<OrderDeposit>): DocumentData {
+		const any = {...model} as any
+		if (!any.created) any.created = FieldValue.serverTimestamp()
+		delete any.id
+		return any
+	},
+	fromFirestore: function (snapshot: QueryDocumentSnapshot): OrderDeposit {
+		const data = snapshot.data()
+		return {
+			...data,
+			id: snapshot.id,
+			created: data.created?.toDate(),
+			order: {...data.order, created: data.order.created.toDate()}
+		} as OrderDeposit
+	}
 }

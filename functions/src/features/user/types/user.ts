@@ -13,12 +13,12 @@ export type User = {
 }
 
 export const userConverter: FirestoreDataConverter<User> = {
-    toFirestore: (user: WithFieldValue<User>): DocumentData => {
-        const {username, ...data} = user
-        return data
-    },
-    fromFirestore: (snap: QueryDocumentSnapshot): User => {
-        const data = snap.data()
-        return {...data, username: snap.id, created: data.created?.toDate()} as User
-    }
+	toFirestore: (user: WithFieldValue<User>): DocumentData => {
+		const {username, ...data} = user
+		return data
+	},
+	fromFirestore: (snap: QueryDocumentSnapshot): User => {
+		const data = snap.data()
+		return {...data, username: snap.id, created: data.created?.toDate()} as User
+	}
 }

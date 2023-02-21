@@ -10,13 +10,13 @@ export type OrderModel = {
 }
 
 export const modelConverter: FirestoreDataConverter<OrderModel> = {
-    toFirestore(model: OrderModel): DocumentData {
-        const any = model as any
-        delete any.id
-        return any
-    },
-    fromFirestore(snap: QueryDocumentSnapshot): OrderModel {
-        const data = snap.data()
-        return {...data, id: snap.id} as OrderModel
-    }
+	toFirestore(model: OrderModel): DocumentData {
+		const any = model as any
+		delete any.id
+		return any
+	},
+	fromFirestore(snap: QueryDocumentSnapshot): OrderModel {
+		const data = snap.data()
+		return {...data, id: snap.id} as OrderModel
+	}
 }
