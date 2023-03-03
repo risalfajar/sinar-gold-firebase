@@ -8,6 +8,14 @@ service firebase.storage {
     match /craftsmanOrder/{id}/{allPaths=**} {
       allow write: if isSignedIn() && imageOnly() && maxSize(1000);
     }
+        
+    match /diamondGoods/{id}/{allPaths=**} {
+      allow write: if isSignedIn() && imageOnly() && maxSize(1000);
+    }    
+        
+    match /nonDiamondGoods/{id}/{allPaths=**} {
+      allow write: if isSignedIn() && imageOnly() && maxSize(1000);
+    }   
   }
 
   function isSignedIn() {
