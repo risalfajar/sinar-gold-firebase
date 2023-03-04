@@ -26,16 +26,14 @@ service cloud.firestore {
       }
     }
 
-    match /diamondGoods/{id} {
+    match /goods/{id} {
       allow read: if isSignedIn();
       allow create, delete: if isSignedIn();
       allow update: if isSignedIn() && !affectedKeys().hasAny(['created']);
     }
 
-    match /nonDiamondGoods/{id} {
+    match /goodsHistory/{id} {
       allow read: if isSignedIn();
-      allow create, delete: if isSignedIn();
-      allow update: if isSignedIn() && !affectedKeys().hasAny(['created']);
     }
 
     match /users/{id} {
