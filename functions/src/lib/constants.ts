@@ -12,6 +12,10 @@ export const COLLECTION_CRAFTSMAN_ORDER_DEPOSIT = "deposits"
 export const COLLECTION_CRAFTSMAN_ORDER_ADVANCE = "cashAdvances"
 export const COLLECTION_GOODS = "goods"
 export const COLLECTION_GOODS_HISTORY = "goodsHistory"
+export const COLLECTION_SALES = "sales"
 
 // Cloud Functions
 export const CLOUD_FUNCTIONS_DEFAULT_REGION = "asia-southeast2"
+
+// Locale
+export const LOCALE_INDONESIA = "id"
