@@ -28,8 +28,9 @@ service cloud.firestore {
 
     match /goods/{id} {
       allow read: if isSignedIn();
-      allow create, delete: if isSignedIn();
-      allow update: if isSignedIn() && !affectedKeys().hasAny(['created']);
+      allow create: if isSignedIn() && incomingData().status == 'AVAILABLE';
+      allow update: if isSignedIn() && !affectedKeys().hasAny(['created', 'status']);
+      allow delete: if isSignedIn();
     }
 
     match /goodsHistory/{id} {
